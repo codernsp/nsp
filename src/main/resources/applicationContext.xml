@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="messageProcessorApp" class="com.nsp.messageProcessor.processEngine.MessageProcessorApplication" init-method="init"/>
+
+    <bean id="messageProcessor" class="com.nsp.messageProcessor.processEngine.MessageProcessor">
+        <constructor-arg ref="message"/>
+    </bean>
+
+
+    <bean id="message" class="com.nsp.messageProcessor.message.Message">
+        <constructor-arg ref="messageBuilder"/>
+    </bean>
+
+
+    <bean id="messageBuilder" class="com.nsp.messageProcessor.message.Message.Builder"/>
+
+    <bean id="product" class="com.nsp.messageProcessor.product.Product">
+        <constructor-arg ref="productBuilder"/>
+    </bean>
+
+
+    <bean id="productBuilder" class="com.nsp.messageProcessor.product.Product.Builder"/>
+
+
+    <bean id="saleBuilder" class="com.nsp.messageProcessor.sale.Sale.Builder"/>
+
+
+
+</beans>
