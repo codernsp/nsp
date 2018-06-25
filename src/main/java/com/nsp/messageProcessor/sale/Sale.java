@@ -1,8 +1,4 @@
-/******************************************************************
- * @author: npandey
- * @Date: 09/06/18
- * Sale.java
- ******************************************************************/
+
 package com.nsp.messageProcessor.sale;
 
 import com.nsp.messageProcessor.adjustment.Adjustment;

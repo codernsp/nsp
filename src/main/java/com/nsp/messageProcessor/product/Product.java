@@ -1,8 +1,4 @@
-/******************************************************************
- * @author: npandey
- * @Date: 09/06/18
- * Product.java
- ******************************************************************/
+
 package com.nsp.messageProcessor.product;
 
 import org.springframework.beans.factory.annotation.Autowired;
